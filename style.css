@@ -1,0 +1,19 @@
+table{
+    border: 1px solid black;
+  
+    text-align: center;
+}
+td{
+    border: 1px solid black;
+    
+    
+}
+.green{
+    color:rgb(3, 88, 14)
+}
+
+.blue{
+    color:rgb(39, 114, 226);
+}
+
+
