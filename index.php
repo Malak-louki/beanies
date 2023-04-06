@@ -1,32 +1,22 @@
-<?php
-include "variables.php";
-include "function.php";
+<?php 
+
+$pageTitle = "page accueil";
+include_once 'includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Beanies PHP</title>
-</head>
-<body>
-
-<table>
-    <tr>
-        <th>key</th>
-        <th>Product name</th>
-        <th>HT price</th>
-        <th>Price</th>
-        <th>description</th>
-    </tr>
-    <?php 
-
-        foreach($beanies as $key => $beanie){
-            afficherTableau($beanie,$key);
-        };
+<section class='d-flex gap-5 align-items-center justify-content-center m-5'>
+    <?php
+    $i =0;
+    foreach ($beanies as $i => $valeur){
+        if ($i==3) {
+            break;
+           
+        } 
+        displayCardsBonnet($valeur); 
+    }
     ?>
-    </table>
-</body>
-</html>
+    </section>
+    <a href="list.php" class="btn btn-warning">Liste Complete</a>
+<?php
+
+include_once "includes/footer.php";
+?>

@@ -17,3 +17,14 @@
 
 };
 ?>
+<?php function displayCardsBonnet(array $beanie){?>
+<div class="card" style="width: 18rem;">
+<img src="<?php echo $beanie['image'];?>" class="card-img-top" alt="...">
+<div class="card-body">
+<h5 class="card-title"> <?php echo $beanie['name'];?></h5>
+    <p class="card-text"> <?php echo $beanie['description'];?></p>
+    <p><?php echo $beanie['price'];?></p>
+    <a href="#" class="btn btn-primary"></a>
+</div>
+</div>
+<?php } ?>
