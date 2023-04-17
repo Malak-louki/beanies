@@ -1,12 +1,13 @@
 <?php 
-$pageTitle = "login";
-include 'includes/header.php';
+
+
 if (isset($_POST['username']) && $_POST['password'] == $password){
   $_SESSION['username'] = $_POST['username'];
   header('Location: index.php?login=success');
-} elseif (isset($_POST['password']) && $_POST['password'] != $password) { ?>
+}
+  elseif (isset($_POST['password']) && $_POST['password'] != $password) { ?>
 <div class="alert alert-danger" role="alert">
-  This is a danger alert—check it out!
+  Wrong password
 </div>
 <?php } ?>
 
@@ -24,7 +25,7 @@ if (isset($_POST['username']) && $_POST['password'] == $password){
 </form>
 
 <?php
-include 'includes/footer.php';
+
 ?>
 
 

@@ -27,5 +27,5 @@
         "price"       => 12.0,
         "image"       => "img/bonnet_vert.jpg"
     ]];
-    $password = 'malak';
+    $password = 'malak123';
     ?>

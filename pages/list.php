@@ -1,7 +1,7 @@
 
 <?php 
 $pageTitle = "Bienvenue !";
-include 'includes/header.php';
+
 ?>
 
 <table>
@@ -19,6 +19,3 @@ include 'includes/header.php';
         };
     ?>
     </table>
-    <?php 
-include 'includes/footer.php';
-?>

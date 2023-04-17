@@ -2,6 +2,9 @@
 session_start();
 require_once "includes/variables.php";
 require_once "includes/function.php";
+if(!isset($pageTitle)){
+  $pageTitle ="Bienvenue !";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,25 +28,22 @@ require_once "includes/function.php";
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="list.php">list</a>
+          <a class="nav-link" href="?page=list">list</a>
           <?php
           if(isset($_SESSION['username'])) {
             ?>
             <li class="nav-item">
-            <a class="nav-link" href="login.php"><?=$_SESSION['username'];?></a>
+            <a class="nav-link" href="?page=login"><?=$_SESSION['username'];?></a>
 
             <li class="nav-item">
-            <a class="nav-link" href="logout.php">Logout</a>
+            <a class="nav-link" href="?page=logout">Logout</a>
           </li>
           <?php } else { ?>
             <li class="nav-item">
-            <a class="nav-link" href="login.php">log in</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">logout</a>
+            <a class="nav-link" href="?page=login">log in</a>
           </li>
          <?php } ?>
           
