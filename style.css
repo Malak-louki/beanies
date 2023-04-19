@@ -15,5 +15,7 @@ td{
 .blue{
     color:rgb(39, 114, 226);
 }
-
-
+a{
+    text-decoration: none;
+    
+}

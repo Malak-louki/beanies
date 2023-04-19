@@ -3,15 +3,17 @@
 
 
 $pages = [
-        'list'=>'all our beanies', 
-        'login'=>'login page', 
-        'home'=>'"welcome !', 
-        'logout'=>''
-    ];
+    'list' => 'all our beanies',
+    'login' => 'login page',
+    'home' => '"welcome !',
+    'logout' => '',
+    'cart' => 'Your cart',
 
-    $page = 'home';
+];
 
-if(isset($_GET["page"]) && array($_GET['page'],$pages)){
+$page = 'home';
+
+if (isset($_GET["page"]) && array($_GET['page'], $pages)) {
     $page = $_GET["page"];
 }
 
@@ -38,3 +40,4 @@ include_once 'includes/footer.php';
 
 ob_end_flush();
 ?>
+

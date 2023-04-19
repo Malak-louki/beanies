@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 $pageTitle = "Bienvenue !";
 
 ?>
@@ -11,11 +10,13 @@ $pageTitle = "Bienvenue !";
         <th>HT price</th>
         <th>Price</th>
         <th>description</th>
+        <th>buy</th>
     </tr>
-    <?php 
+    <?php
 
-        foreach($beanies as $key => $beanie){
-            afficherTableau($beanie,$key);
-        };
+    foreach ($beanies as $key => $beanie) {
+        afficherTableau($beanie, $key);
+    }
+    ;
     ?>
-    </table>
+</table>
