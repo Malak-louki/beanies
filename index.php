@@ -1,32 +1,43 @@
 <?php
-include "variables.php";
-include "function.php";
+
+
+
+$pages = [
+    'list' => 'all our beanies',
+    'login' => 'login page',
+    'home' => '"welcome !',
+    'logout' => '',
+    'cart' => 'Your cart',
+
+];
+
+$page = 'home';
+
+if (isset($_GET["page"]) && array($_GET['page'], $pages)) {
+    $page = $_GET["page"];
+}
+
+$pageTitle = $pages[$page];
+
+// switch($page) {
+//     case 'list':
+//     $pageTitle ="all our beanies";
+//     break;
+//     case 'login':
+//     $pageTitle = "login page";
+//     break;
+//     default:
+//     $pageTitle = "welcome !";
+//     break;
+// }
+ob_start();
+
+include_once 'includes/header.php';
+
+include_once 'pages/' . $page . '.php';
+
+include_once 'includes/footer.php';
+
+ob_end_flush();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Beanies PHP</title>
-</head>
-<body>
 
-<table>
-    <tr>
-        <th>key</th>
-        <th>Product name</th>
-        <th>HT price</th>
-        <th>Price</th>
-        <th>description</th>
-    </tr>
-    <?php 
-
-        foreach($beanies as $key => $beanie){
-            afficherTableau($beanie,$key);
-        };
-    ?>
-    </table>
-</body>
-</html>
