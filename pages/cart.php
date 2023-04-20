@@ -42,7 +42,7 @@ if (isset($_GET['id'])) {
 } elseif (isset($_GET['mode']) && $_GET['mode'] == 'empty') {
     $_SESSION['cart'] = [];
 }
-var_dump($_SESSION['cart']);
+
 
 
 ?>

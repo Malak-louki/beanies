@@ -8,6 +8,7 @@ $pages = [
     'home' => '"welcome !',
     'logout' => '',
     'cart' => 'Your cart',
+    'contact'=>'contact us'
 
 ];
 
