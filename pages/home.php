@@ -12,4 +12,4 @@ $pageTitle = "home";
     }
     ?>
 </section>
-<a href="?page=cart&id=<?= $id; ?>" class="btn btn-warning">all the List</a>
+<a href="?page=cart&id=<?= $id; ?>" class="btn btn-warning">my cart</a>
