@@ -1,11 +1,16 @@
 <?php
 class Beanie
 {
+    const AVAILABLE_SIZES = ['S', 'M', 'L', 'XL'];
+    const AVAILABLE_MATERIALS = ['laine', 'soie', 'coton', 'cachemire'];
+
     protected ?int $id;
     protected ?string $name;
     protected ?string $description;
     protected ?float $price = 0.0;
     protected ?string $image;
+    protected ?array $sizes  = [];
+    protected ?array $materials = [];
 
 
 
@@ -74,5 +79,31 @@ class Beanie
         $this->image = $image;
         return $this;
     }
+
+	/**
+	 * @return array|null
+	 */
+	public function getSizes(): ?array {
+		return $this->sizes;
+	}
+	
+	/**
+	 * @param array|null $sizes 
+	 * @return self
+	 */
+	public function setSizes(?array $sizes): self {
+		$this->sizes = $sizes;
+		return $this;
+	}
+
+	public function getMaterials(): ?array {
+		return $this->materials;
+	}
+	
+	public function setMaterials(?array $materials): self {
+		$this->materials = $materials;
+		return $this;
+	}
 }
+
 ?>
