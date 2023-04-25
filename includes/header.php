@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once "includes/autoload.php";
 require_once "includes/variables.php";
 require_once "includes/function.php";
 if (!isset($pageTitle)) {
