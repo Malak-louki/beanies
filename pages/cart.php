@@ -63,8 +63,8 @@ if (isset($_GET['id'])) {
     <?php
     $total = 0.0;
     foreach ($_SESSION['cart'] as $id => $quantity) {
-        $beanie = $beanies[$id];
-        $price = $beanie['price'] * $quantity;
+        $beanie = findById($beanies, $id);
+        $price = $beanie->getPrice() * $quantity;
         $total += $price
             ?>
         <tbody>
@@ -73,10 +73,10 @@ if (isset($_GET['id'])) {
                     <?= $id ?>
                 </td>
                 <td>
-                    <?= $beanie['name'] ?>
+                    <?= $beanie->getName() ?>
                 </td>
                 <td>
-                    <?= formatPrice($beanie['price']) ?>
+                    <?= formatPrice($beanie->getPrice()) ?>
                 </td>
                 <td> <a href="?page=cart&id=<?= $id; ?>">+</a>
                     <?= $quantity ?>
