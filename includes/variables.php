@@ -9,7 +9,8 @@ $beanies = [
         ->setDescription($description)
         ->setPrice(10.0)
         ->setImage("img/bonnet_creme.jpg")
-    ,
+        ->setSizes(['M','L'])
+        ->setMaterials(['coton']),
 
     (new Beanie())
         ->setId(39)
@@ -17,7 +18,8 @@ $beanies = [
         ->setDescription($description)
         ->setPrice(14.0)
         ->setImage("img/bonnet_rouge.jpg")
-    ,
+        ->setSizes(['S','M','L'])
+        ->setMaterials(['cachemire']),
 
     (new Beanie())
         ->setId(26)
@@ -25,7 +27,8 @@ $beanies = [
         ->setDescription($description)
         ->setPrice(20.0)
         ->setImage("img/bonnet_teal.jpg")
-    ,
+        ->setSizes(['S', 'M', 'L', 'XL'])
+        ->setMaterials(['soie']),
 
     (new Beanie())
         ->setId(99)
@@ -33,7 +36,8 @@ $beanies = [
         ->setDescription($description)
         ->setPrice(12.0)
         ->setImage("img/bonnet_vert.jpg")
-    ,
+        ->setSizes(['S', 'M', 'L', 'XL'])
+        ->setMaterials(['laine', 'soie']),
 ];
 $password = 'malak123';
 ?>
